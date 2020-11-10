@@ -1,21 +1,11 @@
 package com.example.coffeetime.models
 
+import java.io.Serializable
 
 
 class OrderLine(val product: Product,
                 val option: ProductOption,
-                val quantity: Int,
-                val ownerId: String) {
-
-    var price: Float = 0F
-
-    init {
-         price = product.price * quantity
-    }
-
-    fun editOrderLine(product: Product = this.product,
-                      option: ProductOption = this.option,
-                      quantity: Int = this.quantity): OrderLine {
-        return OrderLine(product, option, quantity, this.ownerId)
-    }
+                val ownerId: String,
+                val price: Float,
+                val description: String = "") : Serializable {
 }

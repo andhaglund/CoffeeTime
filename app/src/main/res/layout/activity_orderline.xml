@@ -15,28 +15,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </RadioGroup>
-        </RadioGroup>
-    </LinearLayout>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/orderline_layout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/orderline_layout" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

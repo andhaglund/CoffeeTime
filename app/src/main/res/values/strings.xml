@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">CoffeeTime</string>
+    <string name="coffee">Coffee</string>
     <string name="company">Company</string>
     <string name="company_code">Company Code</string>
-    <string name="title_dashboard">Order</string>
+    <string name="currency">kr</string>
     <string name="first_name">First Name</string>
-    <string name="title_home">Home</string>
     <string name="last_name">Last Name</string>
-    <string name="submit">Submit</string>
-    <string name="title_notifications">Notifications</string>
     <string name="phone_number">Phone Number</string>
+    <string name="product">Product</string>
+    <string name="submit">Submit</string>
+    <string name="title_history">History</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_order">Order</string>
 </resources>
