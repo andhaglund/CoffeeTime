@@ -3,7 +3,7 @@ package com.example.coffeetime.models
 class Order() {
 
     val orderLines = mutableListOf<OrderLine>()
-    var open = true
+    var isOpen = true
     var owner = ""
 
     fun addOrderLine(orderLine: OrderLine) {
@@ -11,13 +11,13 @@ class Order() {
     }
 
     fun closeOrder(owner: String) {
-        this.open = !this.open
+        this.isOpen = !this.isOpen
         this.owner = owner
     }
 
     fun openOrder(owner: String) {
         if (this.owner == owner) {
-            this.open = !this.open
+            this.isOpen = !this.isOpen
             this.owner = ""
         }
     }

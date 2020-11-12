@@ -9,9 +9,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.coffeetime.utilities.FirestoreHandler
-import com.example.coffeetime.utilities.OrderUtilities
-import kotlinx.android.synthetic.main.fragment_order.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,9 +25,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_order, R.id.navigation_home, R.id.navigation_notifications))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        layout_order.addView(OrderUtilities.createOrderHeader(this))
-        FirestoreHandler.getOrderLines(this, layout_order)
     }
 
     fun openOrderLineActivity(view: View) {

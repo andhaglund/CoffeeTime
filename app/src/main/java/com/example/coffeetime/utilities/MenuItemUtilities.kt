@@ -33,7 +33,7 @@ class MenuItemUtilities {
                 layout.addView(ProductUtilities.createProductCategoryHeaderView(context, category))
 
                 for (menuItem in menuItems.filter { it.product.category == category }) {
-                    layout.addView(menuItem.createMenuItemView(context))
+                    layout.addView(menuItem.createView(context))
                 }
             }
 

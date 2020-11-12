@@ -11,21 +11,18 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 
-class OrderLine(val product: Product,
-                val option: ProductOption,
-                val owner: User,
+class OrderLine(val product: Product = Product(),
+                val option: ProductOption = ProductOption.REGULAR,
+                val owner: User = User(),
                 val price: Float = 0F,
-                val comment: String = "") : Serializable {
-
-    constructor() : this(Product(), ProductOption.REGULAR, User(), 0F, "")
-
-    var date: String = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE)
+                val comment: String = "",
+                val date: String = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE)) : Serializable {
 
     /**
      * Creates a LinearLayout containing orderLine information like
      * product, price, option and owner
      */
-    fun createOrderLineView(context: Context): View {
+    fun createView(context: Context): View {
         val layout = LinearLayout(context)
         layout.orientation = LinearLayout.HORIZONTAL
         layout.setPadding(10, 10, 0, 20)

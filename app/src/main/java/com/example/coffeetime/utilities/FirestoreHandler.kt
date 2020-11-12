@@ -37,7 +37,7 @@ class FirestoreHandler {
                     collection.documents.forEach{
                         val orderLine = it.toObject(OrderLine::class.java)
                         if (orderLine != null) {
-                            parentLayout.addView(orderLine.createOrderLineView(context))
+                            parentLayout.addView(orderLine.createView(context))
                             Log.d("Firebase", "Document: ${orderLine?.product?.name}")
                         }
                     }

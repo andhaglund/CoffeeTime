@@ -14,17 +14,15 @@ import java.io.Serializable
  *
  * Future extension: handle different prize based on choices (size, strength etc)
  */
-class Product (val name: String,
-               val price: Float,
-               val hasOptions: Boolean,
+class Product (val name: String = "",
+               val price: Float = 0F,
+               val hasOptions: Boolean = false,
                val category: Category = Category.COFFEE) : Serializable {
-
-    constructor() : this("", 0F, false, Category.ALL)
 
     /**
      * Creates a LinearLayout which displays the product name and price
      */
-    fun createProductView(context: Context): LinearLayout {
+    fun createView(context: Context): LinearLayout {
         val layout = LinearLayout(context)
         layout.orientation = LinearLayout.HORIZONTAL
         layout.setPadding(10, 10, 0, 20)
