@@ -12,7 +12,6 @@ import java.io.Serializable
  * Class for holding the different coffee types. Named "Product" to make the model
  * more flexible to future extensions (cake, smoothies etc)
  *
- * Future extension: handle different prize based on choices (size, strength etc)
  */
 class Product (val name: String = "",
                val price: Float = 0F,
@@ -28,8 +27,6 @@ class Product (val name: String = "",
         layout.setPadding(10, 10, 0, 20)
         layout.layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT, 0.6F)
         layout.addView(createNameView(context))
-
-
         layout.addView(createPriceView(context))
 
         return layout

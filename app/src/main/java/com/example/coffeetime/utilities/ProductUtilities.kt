@@ -40,6 +40,4 @@ class ProductUtilities {
             return header
         }
     }
-
-
 }
