@@ -10,5 +10,6 @@ enum class ProductOption(val option: String,
 
     SINGLE("Single", Category.COFFEE, 0F),
     DOUBLE("Double", Category.COFFEE, 3F),
-    REGULAR("Regular", Category.ALL, 0F);
+    REGULAR("Regular", Category.ALL, 0F),
+    OTHER("Other", Category.OTHER, 0F);
 }

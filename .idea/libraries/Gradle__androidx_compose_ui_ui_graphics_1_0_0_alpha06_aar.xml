@@ -3,8 +3,9 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c8dad834b8863e334c6e4560a915b6b/jetified-ui-graphics-1.0.0-alpha06/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/22581d7c2f613e65d3ecfe8587db6c8e/jetified-ui-graphics-1.0.0-alpha06/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/22581d7c2f613e65d3ecfe8587db6c8e/jetified-ui-graphics-1.0.0-alpha06/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/22581d7c2f613e65d3ecfe8587db6c8e/jetified-ui-graphics-1.0.0-alpha06/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a98b9b892af2d7fa9b9874121f5cf70d/jetified-ui-graphics-1.0.0-alpha06/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a98b9b892af2d7fa9b9874121f5cf70d/jetified-ui-graphics-1.0.0-alpha06/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a98b9b892af2d7fa9b9874121f5cf70d/jetified-ui-graphics-1.0.0-alpha06/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

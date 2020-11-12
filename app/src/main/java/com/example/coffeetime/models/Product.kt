@@ -1,17 +1,11 @@
 package com.example.coffeetime.models
 
 import android.content.Context
-import android.icu.number.Precision.currency
 import android.view.Gravity
-import android.view.View
-import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.widget.LinearLayout
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.TextView
 import com.example.coffeetime.R
-import org.w3c.dom.Text
 import java.io.Serializable
 
 /**
@@ -25,6 +19,11 @@ class Product (val name: String,
                val hasOptions: Boolean,
                val category: Category = Category.COFFEE) : Serializable {
 
+    constructor() : this("", 0F, false, Category.ALL)
+
+    /**
+     * Creates a LinearLayout which displays the product name and price
+     */
     fun createProductView(context: Context): LinearLayout {
         val layout = LinearLayout(context)
         layout.orientation = LinearLayout.HORIZONTAL
@@ -57,7 +56,11 @@ class Product (val name: String,
      */
     private fun createPriceView(context: Context): TextView {
         val priceView = TextView(context)
-        priceView.text = this.price.toString().plus(" ").plus(context.getString(R.string.currency))
+        if (this.price == 0F) {
+            priceView.text = "-"
+        } else {
+            priceView.text = this.price.toString().plus(" ").plus(context.getString(R.string.currency))
+        }
         priceView.textSize = 22f
         priceView.gravity = Gravity.CENTER
         priceView.layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT, 1F)

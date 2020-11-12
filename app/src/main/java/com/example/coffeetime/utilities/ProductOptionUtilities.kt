@@ -1,6 +1,7 @@
 package com.example.coffeetime.utilities
 
 import android.content.Context
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
@@ -42,7 +43,18 @@ class ProductOptionUtilities() {
                         }
                     }
                 }
+                Category.OTHER -> {
+                    radioGroup.addView(createRadioButton(context, ProductOption.OTHER.option, 0))
+                    radioGroup.setOnCheckedChangeListener { _, _ ->
+                        menuItem.isChosen = true
+                        menuItem.option = ProductOption.OTHER
+                    }
+                }
                 // TODO: Future extension: add other product categories e.g cake, smoothie
+                else -> {
+                    Log.i("ProductOptionUtilities",
+                        "Missing option in when-clause for category ${menuItem.product.category}")
+                }
             }
             return radioGroup
         }

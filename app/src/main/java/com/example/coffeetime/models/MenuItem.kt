@@ -5,10 +5,10 @@ import android.widget.LinearLayout
 import com.example.coffeetime.utilities.ProductOptionUtilities
 
 class MenuItem(val product: Product) {
-    lateinit var option: ProductOption
     var isChosen = false
+    var option = ProductOption.REGULAR
 
-    fun createMenuLineView(context: Context): LinearLayout {
+    fun createMenuItemView(context: Context): LinearLayout {
         val layout = LinearLayout(context)
         layout.orientation = LinearLayout.HORIZONTAL
         layout.setPadding(10, 10, 10, 20)

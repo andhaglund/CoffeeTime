@@ -10,12 +10,6 @@ class Order() {
         this.orderLines.add(orderLine)
     }
 
-    fun removeOrderLine(index: Int, owner: String) {
-        if(this.orderLines[index].ownerId != owner) {
-            this.orderLines.removeAt(index)
-        }
-    }
-
     fun closeOrder(owner: String) {
         this.open = !this.open
         this.owner = owner
@@ -26,10 +20,6 @@ class Order() {
             this.open = !this.open
             this.owner = ""
         }
-    }
-
-    fun summarizeOrder() {
-
     }
 
 }

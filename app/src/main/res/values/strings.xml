@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">CoffeeTime</string>
     <string name="coffee">Coffee</string>
+    <string name="comment">Comment</string>
     <string name="company">Company</string>
     <string name="company_code">Company Code</string>
     <string name="currency">kr</string>
@@ -12,4 +13,7 @@
     <string name="title_history">History</string>
     <string name="title_profile">Profile</string>
     <string name="title_order">Order</string>
+    <string name="option">Option</string>
+    <string name="price">Price</string>
+    <string name="person">Person</string>
 </resources>

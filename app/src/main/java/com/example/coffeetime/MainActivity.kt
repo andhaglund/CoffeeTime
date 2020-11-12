@@ -9,6 +9,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.coffeetime.utilities.FirestoreHandler
+import com.example.coffeetime.utilities.OrderUtilities
+import kotlinx.android.synthetic.main.fragment_order.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
@@ -25,9 +29,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        layout_order.addView(OrderUtilities.createOrderHeader(this))
+        FirestoreHandler.getOrderLines(this, layout_order)
     }
 
-    fun addOrderLine(view: View) {
+    fun openOrderLineActivity(view: View) {
         val intent = Intent(this, OrderLineActivity::class.java)
         startActivity(intent)
     }
